@@ -70,7 +70,7 @@
             // dashboardExtractDataSource1
             // 
             this.dashboardExtractDataSource1.ComponentName = "dashboardExtractDataSource1";
-            this.dashboardExtractDataSource1.FileName = "C:\\Data\\NWind_SalesPerson.dat";
+            this.dashboardExtractDataSource1.FileName = "NWind_SalesPerson.dat";
             this.dashboardExtractDataSource1.Name = "Extract Data Source 1";
             // 
             // listBoxDashboardItem2
