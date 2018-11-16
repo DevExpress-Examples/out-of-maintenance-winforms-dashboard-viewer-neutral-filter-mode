@@ -16,7 +16,7 @@ namespace WinForms_NeutralFilterMode_Example
         public Form1()
         {
             InitializeComponent();
-            dashboardViewer1.NeutralFilterMode = true;
+            dashboardViewer1.UseNeutralFilterMode = true;
             dashboardViewer1.CustomizeDashboardTitle += DashboardViewer1_CustomizeDashboardTitle;
             dashboardViewer1.UpdateDashboardTitle();
         }
@@ -25,9 +25,9 @@ namespace WinForms_NeutralFilterMode_Example
         {
             DashboardViewer dashboardViewer = (DashboardViewer)sender;
 
-            DashboardToolbarItem commandButton = new DashboardToolbarItem(dashboardViewer.NeutralFilterMode, "NEUTRAL FILTER MODE",
+            DashboardToolbarItem commandButton = new DashboardToolbarItem(dashboardViewer.UseNeutralFilterMode, "NEUTRAL FILTER MODE",
                 new Action<DashboardToolbarItemClickEventArgs>((args) => {
-                    dashboardViewer.NeutralFilterMode = !dashboardViewer.NeutralFilterMode;
+                    dashboardViewer.UseNeutralFilterMode = !dashboardViewer.UseNeutralFilterMode;
                     dashboardViewer1.DashboardSource = typeof(Dashboard1);
                 }));
             commandButton.Caption = "NEUTRAL FILTER MODE";
