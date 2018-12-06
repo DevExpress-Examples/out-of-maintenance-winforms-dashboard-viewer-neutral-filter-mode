@@ -19,6 +19,7 @@ namespace WinForms_NeutralFilterMode_Example
             dashboardViewer1.UseNeutralFilterMode = true;
             dashboardViewer1.CustomizeDashboardTitle += DashboardViewer1_CustomizeDashboardTitle;
             dashboardViewer1.UpdateDashboardTitle();
+            dashboardViewer1.DashboardSource = typeof(Dashboard1);
         }
 
         private void DashboardViewer1_CustomizeDashboardTitle(object sender, DevExpress.DashboardWin.CustomizeDashboardTitleEventArgs e)
