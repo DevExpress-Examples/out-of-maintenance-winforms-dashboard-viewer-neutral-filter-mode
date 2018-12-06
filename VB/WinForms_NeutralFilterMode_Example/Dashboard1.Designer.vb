@@ -35,12 +35,12 @@
             Dim dashboardLayoutItem2 As New DevExpress.DashboardCommon.DashboardLayoutItem()
             Dim dashboardLayoutItem3 As New DevExpress.DashboardCommon.DashboardLayoutItem()
             Me.listBoxDashboardItem1 = New DevExpress.DashboardCommon.ListBoxDashboardItem()
-            Me.dashboardExtractDataSource1 = New DevExpress.DashboardCommon.DashboardExtractDataSource()
+            Me.dashboardExtractDataSource2 = New DevExpress.DashboardCommon.DashboardExtractDataSource()
             Me.listBoxDashboardItem2 = New DevExpress.DashboardCommon.ListBoxDashboardItem()
             Me.chartDashboardItem1 = New DevExpress.DashboardCommon.ChartDashboardItem()
             CType(Me.listBoxDashboardItem1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(dimension1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.dashboardExtractDataSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.dashboardExtractDataSource2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.listBoxDashboardItem2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(dimension2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.chartDashboardItem1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,18 +54,18 @@
             dimension1.DataMember = "OrderDate"
             Me.listBoxDashboardItem1.DataItemRepository.Clear()
             Me.listBoxDashboardItem1.DataItemRepository.Add(dimension1, "DataItem0")
-            Me.listBoxDashboardItem1.DataSource = Me.dashboardExtractDataSource1
+            Me.listBoxDashboardItem1.DataSource = Me.dashboardExtractDataSource2
             Me.listBoxDashboardItem1.FilterDimensions.AddRange(New DevExpress.DashboardCommon.Dimension() { dimension1})
             Me.listBoxDashboardItem1.InteractivityOptions.IgnoreMasterFilters = False
             Me.listBoxDashboardItem1.Name = "List Box 1"
             Me.listBoxDashboardItem1.ShowAllValue = False
             Me.listBoxDashboardItem1.ShowCaption = True
             ' 
-            ' dashboardExtractDataSource1
+            ' dashboardExtractDataSource2
             ' 
-            Me.dashboardExtractDataSource1.ComponentName = "dashboardExtractDataSource1"
-            Me.dashboardExtractDataSource1.FileName = "NWind_SalesPerson.dat"
-            Me.dashboardExtractDataSource1.Name = "Extract Data Source 1"
+            Me.dashboardExtractDataSource2.ComponentName = "dashboardExtractDataSource2"
+            Me.dashboardExtractDataSource2.FileName = "Orders.dat"
+            Me.dashboardExtractDataSource2.Name = "Extract Data Source 1"
             ' 
             ' listBoxDashboardItem2
             ' 
@@ -74,7 +74,7 @@
             dimension2.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear
             Me.listBoxDashboardItem2.DataItemRepository.Clear()
             Me.listBoxDashboardItem2.DataItemRepository.Add(dimension2, "DataItem0")
-            Me.listBoxDashboardItem2.DataSource = Me.dashboardExtractDataSource1
+            Me.listBoxDashboardItem2.DataSource = Me.dashboardExtractDataSource2
             Me.listBoxDashboardItem2.FilterDimensions.AddRange(New DevExpress.DashboardCommon.Dimension() { dimension2})
             Me.listBoxDashboardItem2.InteractivityOptions.IgnoreMasterFilters = False
             Me.listBoxDashboardItem2.Name = "List Box 2"
@@ -84,15 +84,14 @@
             ' chartDashboardItem1
             ' 
             dimension3.DataMember = "OrderDate"
-            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear
             Me.chartDashboardItem1.Arguments.AddRange(New DevExpress.DashboardCommon.Dimension() { dimension3})
             Me.chartDashboardItem1.AxisX.TitleVisible = False
             Me.chartDashboardItem1.ComponentName = "chartDashboardItem1"
             measure1.DataMember = "Quantity"
             Me.chartDashboardItem1.DataItemRepository.Clear()
-            Me.chartDashboardItem1.DataItemRepository.Add(measure1, "DataItem0")
             Me.chartDashboardItem1.DataItemRepository.Add(dimension3, "DataItem1")
-            Me.chartDashboardItem1.DataSource = Me.dashboardExtractDataSource1
+            Me.chartDashboardItem1.DataItemRepository.Add(measure1, "DataItem0")
+            Me.chartDashboardItem1.DataSource = Me.dashboardExtractDataSource2
             Me.chartDashboardItem1.InteractivityOptions.IgnoreMasterFilters = False
             Me.chartDashboardItem1.Name = "Chart 1"
             chartPane1.Name = "Pane 1"
@@ -109,25 +108,26 @@
             ' 
             ' Dashboard1
             ' 
-            Me.DataSources.AddRange(New DevExpress.DashboardCommon.IDashboardDataSource() { Me.dashboardExtractDataSource1})
+            Me.DataSources.AddRange(New DevExpress.DashboardCommon.IDashboardDataSource() { Me.dashboardExtractDataSource2})
             Me.Items.AddRange(New DevExpress.DashboardCommon.DashboardItem() { Me.chartDashboardItem1, Me.listBoxDashboardItem1, Me.listBoxDashboardItem2})
             dashboardLayoutItem1.DashboardItem = Me.listBoxDashboardItem1
-            dashboardLayoutItem1.Weight = 50R
+            dashboardLayoutItem1.Weight = 49.949545913218969R
             dashboardLayoutItem2.DashboardItem = Me.listBoxDashboardItem2
-            dashboardLayoutItem2.Weight = 50R
+            dashboardLayoutItem2.Weight = 50.050454086781031R
             dashboardLayoutGroup2.ChildNodes.AddRange(New DevExpress.DashboardCommon.DashboardLayoutNode() { dashboardLayoutItem1, dashboardLayoutItem2})
             dashboardLayoutGroup2.DashboardItem = Nothing
-            dashboardLayoutGroup2.Weight = 49.924357034795761R
+            dashboardLayoutGroup2.Weight = 42.366863905325445R
             dashboardLayoutItem3.DashboardItem = Me.chartDashboardItem1
-            dashboardLayoutItem3.Weight = 50.075642965204239R
+            dashboardLayoutItem3.Weight = 57.633136094674555R
             dashboardLayoutGroup1.ChildNodes.AddRange(New DevExpress.DashboardCommon.DashboardLayoutNode() { dashboardLayoutGroup2, dashboardLayoutItem3})
             dashboardLayoutGroup1.DashboardItem = Nothing
             dashboardLayoutGroup1.Orientation = DevExpress.DashboardCommon.DashboardLayoutGroupOrientation.Vertical
+            dashboardLayoutGroup1.Weight = 100R
             Me.LayoutRoot = dashboardLayoutGroup1
             Me.Title.Text = "Dashboard"
             CType(dimension1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.listBoxDashboardItem1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.dashboardExtractDataSource1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.dashboardExtractDataSource2, System.ComponentModel.ISupportInitialize).EndInit()
             CType(dimension2, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.listBoxDashboardItem2, System.ComponentModel.ISupportInitialize).EndInit()
             CType(dimension3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -138,10 +138,9 @@
         End Sub
 
         #End Region
-
-        Private dashboardExtractDataSource1 As DevExpress.DashboardCommon.DashboardExtractDataSource
         Private chartDashboardItem1 As DevExpress.DashboardCommon.ChartDashboardItem
         Private listBoxDashboardItem1 As DevExpress.DashboardCommon.ListBoxDashboardItem
         Private listBoxDashboardItem2 As DevExpress.DashboardCommon.ListBoxDashboardItem
+        Private dashboardExtractDataSource2 As DevExpress.DashboardCommon.DashboardExtractDataSource
     End Class
 End Namespace

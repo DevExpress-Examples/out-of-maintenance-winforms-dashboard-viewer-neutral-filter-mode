@@ -18,6 +18,7 @@ Namespace WinForms_NeutralFilterMode_Example
             dashboardViewer1.UseNeutralFilterMode = True
             AddHandler dashboardViewer1.CustomizeDashboardTitle, AddressOf DashboardViewer1_CustomizeDashboardTitle
             dashboardViewer1.UpdateDashboardTitle()
+            dashboardViewer1.DashboardSource = GetType(Dashboard1)
         End Sub
 
         Private Sub DashboardViewer1_CustomizeDashboardTitle(ByVal sender As Object, ByVal e As DevExpress.DashboardWin.CustomizeDashboardTitleEventArgs)
