@@ -1,4 +1,4 @@
-# WinForms Dashboard Viewer - Neutral Filter Mode
+# Dashboard for WinForms - Neutral Filter Mode
 
 This example demonstrates the [neutral filter mode](https://docs.devexpress.com/Dashboard/400262) in WinForms Dashboard Viewer.
 
