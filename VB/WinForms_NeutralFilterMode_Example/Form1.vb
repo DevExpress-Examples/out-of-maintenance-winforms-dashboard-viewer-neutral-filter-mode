@@ -1,16 +1,11 @@
-﻿Imports DevExpress.DashboardWin
+Imports DevExpress.DashboardWin
 Imports System
-Imports System.Collections.Generic
 Imports System.ComponentModel
-Imports System.Data
 Imports System.Drawing
-Imports System.Linq
-Imports System.Text
-Imports System.Threading.Tasks
-Imports System.Windows.Forms
 
 Namespace WinForms_NeutralFilterMode_Example
-    Partial Public Class Form1
+
+    Public Partial Class Form1
         Inherits DevExpress.XtraEditors.XtraForm
 
         Public Sub New()
@@ -21,9 +16,8 @@ Namespace WinForms_NeutralFilterMode_Example
             dashboardViewer1.DashboardSource = GetType(Dashboard1)
         End Sub
 
-        Private Sub DashboardViewer1_CustomizeDashboardTitle(ByVal sender As Object, ByVal e As DevExpress.DashboardWin.CustomizeDashboardTitleEventArgs)
-            Dim dashboardViewer As DashboardViewer = DirectCast(sender, DashboardViewer)
-
+        Private Sub DashboardViewer1_CustomizeDashboardTitle(ByVal sender As Object, ByVal e As CustomizeDashboardTitleEventArgs)
+            Dim dashboardViewer As DashboardViewer = CType(sender, DashboardViewer)
             Dim commandButton As DashboardToolbarItem = New DashboardToolbarItem(dashboardViewer.UseNeutralFilterMode, "NEUTRAL FILTER MODE", New Action(Of DashboardToolbarItemClickEventArgs)(Sub(args)
                 dashboardViewer.UseNeutralFilterMode = Not dashboardViewer.UseNeutralFilterMode
                 dashboardViewer1.DashboardSource = GetType(Dashboard1)
